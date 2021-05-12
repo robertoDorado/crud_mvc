@@ -1,0 +1,39 @@
+html, body {
+	height: 100%;
+    position:relative;
+	}
+
+#tudo {
+	min-height: 100%;
+	}
+
+html #tudo {
+	height: 100%; /* hack para IE6 que trata height como min-height */
+	}
+
+#tudo {
+    position: relative;
+}
+
+#rodape {
+    position: absolute;
+    top:auto;
+    bottom: 0;
+    width:100%;
+    }
+#conteudo {
+    padding-top: 50px;
+    height:420px;
+    overflow-y: scroll;
+    }
+
+::-webkit-scrollbar-track {
+    background-color: #F4F4F4;
+}
+::-webkit-scrollbar {
+    width: 6px;
+    background: #F4F4F4;
+}
+::-webkit-scrollbar-thumb {
+    background: #dad7d7;
+}
