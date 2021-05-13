@@ -60,8 +60,13 @@
         <?php endforeach; ?>
         <?php endif; ?>
     </table>
-
-
+    <div class="container">
+        <div align="center" class="row">
+            <div class="col-md-12">
+                <a id="select--btn-resetar-tabela" class="btn btn-success" href="#">Resetar tabela</a>
+            </div>
+        </div>
+    </div>
 <!-- Ajax Delete -->
     <script>
         const xhr = new XMLHttpRequest;
@@ -104,6 +109,34 @@
     </script>
 <!-- Ajax Delete -->
 </div>
+
+<!-- Ajax truncate table -->
+<script>
+    const xhrValidate = new XMLHttpRequest;
+    const formDataValidate = new FormData;
+
+    document.querySelector("#select--btn-resetar-tabela").addEventListener('click', (e) => {
+        e.preventDefault()
+
+        const validate = true
+
+        formDataValidate.append('validate', validate)
+
+        xhrValidate.onreadystatechange = () => {
+            if(xhrValidate.readyState == 4 && xhrValidate.status == 200){
+                
+                if(xhrValidate.response == 0){
+                    window.location.href = window.location.href
+                }
+            }
+        }
+        
+        xhrValidate.open("POST", "reset")
+        xhrValidate.send(formDataValidate)
+    })
+</script>
+<!-- Ajax truncate table -->
+
 
 <div id="clear"></div>
 <?php $this->loadFooter(); ?>

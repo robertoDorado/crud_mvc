@@ -64,4 +64,13 @@ abstract class Lista{
 
         return true;
     }
+
+    public static function truncateDataLista(){
+        $pdo = Conection::conectionMethod();
+        $sql = "TRUNCATE TABLE lista";
+        $sql = $pdo->prepare($sql);
+        $sql->execute();
+
+        return true;
+    }
 }

@@ -8,9 +8,11 @@ class receberController extends controller {
             $titulo = addslashes($_POST['titulo']);
             $postagem = addslashes($_POST['postagem']);
             Lista::insertDataLista($titulo, $postagem);
+            $this->loadView("receber");
+        }else{
+            header("Location: home");
         }
         
-        $this->loadView("receber");
 
     }
 }

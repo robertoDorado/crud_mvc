@@ -8,7 +8,9 @@ class atualizarController extends controller {
             $id = addslashes($_POST['id']);
     
             Lista::updateListaData($titulo, $postagem, $id);
+            $this->loadView("atualizar");
+        }else{
+            header("Location: home");
         }
-        $this->loadView("atualizar");
     }
 }
