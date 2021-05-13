@@ -20,6 +20,4 @@
     </div>
 </div>
 
-
-
 <?php $this->loadFooter(); ?>

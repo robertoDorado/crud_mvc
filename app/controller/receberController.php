@@ -10,7 +10,7 @@ class ReceberController extends Controller {
             Lista::insertDataLista($titulo, $postagem);
             $this->loadView("receber");
         }else{
-            header("Location: home");
+            header("Location: " . BASE_URL . "/home");
         }
         
 

@@ -11,7 +11,7 @@ class ResetController extends Controller {
                 echo 0;
             }
         }else{
-            header("Location: home");
+            header("Location: " . BASE_URL . "/home");
         }
     }
 }

@@ -3,6 +3,12 @@ error_reporting(E_ALL);
 ini_set("display_errors", "On");
 require_once "app/config/environment.php";
 
+if(ENVIRONMENT == "developer"){
+    define("BASE_URL", "http://localhost/projetos/crud_mvc");
+}else if(ENVIRONMENT == "producer"){
+    define("BASE_URL", "https://clientes.laborcode.com.br/crud_mvc");
+}
+
 spl_autoload_register(function($class){
     if(file_exists("app/core/".$class.".php")){
         require_once "app/core/".$class.".php";
@@ -20,10 +26,5 @@ spl_autoload_register(function($class){
         require_once "app/config/".$class.".php";
     }
 });
-if(ENVIRONMENT == "developer"){
-    define("BASE_URL", "http://localhost/projetos/crud_mvc");
-}else if(ENVIRONMENT == "producer"){
-    define("BASE_URL", "https://clientes.laborcode.com.br/crud_mvc");
-}
 Conection::conectionMethod();
 Core::start();

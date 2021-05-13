@@ -21,10 +21,10 @@
           <div class="collapse navbar-collapse" id="navbarNav">
             <ul class="navbar-nav">
               <li class="nav-item">
-                <a class="nav-link" href="<?php BASE_URL; ?>home">Home</a>
+                <a class="nav-link" href="<?php echo BASE_URL; ?>/home">Home</a>
               </li>
               <li class="nav-item">
-                <a class="nav-link" href="<?php BASE_URL; ?>enviar">Enviar</a>
+                <a class="nav-link" href="<?php echo BASE_URL; ?>/enviar">Enviar</a>
               </li>
             </ul>
           </div>

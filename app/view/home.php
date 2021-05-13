@@ -53,7 +53,7 @@
                 <th scope="row"><?php echo $data['id']; ?></th>
                 <td><?php echo $data['titulo'] ?></td>
                 <td><?php echo $data['postagem']; ?></td>
-                <td><a href="<?php echo BASE_URL; ?>/editar?id=<?php echo $data['id']; ?>">Editar</a></td>
+                <td><a href="<?php echo BASE_URL; ?>/editar/editarinfo/<?php echo $data['id']; ?>">Editar</a></td>
                 <td><a data-toggle="modal" data-target="#meuModal" data-key="<?php echo $data["id"] ?>" id="link-excluir" href="<?php echo BASE_URL; ?>/excluir?id=<?php echo $data['id']; ?>">Excluir</a></td>
             </tr>
         </tbody>
@@ -138,5 +138,4 @@
 <!-- Ajax truncate table -->
 
 
-<div id="clear"></div>
 <?php $this->loadFooter(); ?>
