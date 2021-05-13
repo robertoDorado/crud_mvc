@@ -1,5 +1,5 @@
 <?php
-class excluirController extends controller {
+class ExcluirController extends Controller {
 
     public function index(){
         if(isset($_POST['id']) && !empty($_POST['id'])){

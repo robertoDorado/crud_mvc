@@ -1,5 +1,5 @@
 <?php
-class resetController extends controller {
+class ResetController extends Controller {
 
     public function index(){
         if(isset($_POST['validate']) && !empty($_POST['validate'])){

@@ -1,5 +1,5 @@
 <?php
-class editarController extends controller{
+class EditarController extends Controller{
 
     public function index(){
         $id = $_GET['id'];

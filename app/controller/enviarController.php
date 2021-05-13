@@ -1,5 +1,5 @@
 <?php
-class enviarController extends controller{
+class EnviarController extends Controller{
 
     public function index(){
         

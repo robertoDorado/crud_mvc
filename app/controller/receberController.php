@@ -1,5 +1,5 @@
 <?php
-class receberController extends controller {
+class ReceberController extends Controller {
 
     public function index(){
         

@@ -1,3 +1,3 @@
 <?php
 define("ENVIRONMENT", "developer");
-// difine("ENVIRONMENT", "producer");
+// define("ENVIRONMENT", "producer");

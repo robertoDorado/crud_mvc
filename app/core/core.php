@@ -7,7 +7,7 @@ abstract class Core {
         if(isset($_GET['url'])){
             $url = explode("/", $_GET['url']);
             array_shift($url);
-            $currentController = $url[0] . "Controller";
+            $currentController = ucfirst($url[0]) . "Controller";
             array_shift($url);
             
             if(empty($url[0]) || !isset($url[0])){
@@ -19,15 +19,17 @@ abstract class Core {
             }
 
             if(!file_exists($currentController) && !method_exists($currentController, $currentAction)){
-                $currentController = "notfoundController";
+                $currentController = "NotFoundController";
                 $currentAction = "index";
             }
         }else{
-            $currentController = "homeController";
+
+            $currentController = "HomeController";
             $currentAction = "index";
         }
 
         $controller = new $currentController;
         call_user_func_array(array($controller, $currentAction), $params);
+
     }
 }

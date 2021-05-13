@@ -1,5 +1,5 @@
 <?php
-class atualizarController extends controller {
+class AtualizarController extends Controller {
 
     public function index(){
         if(isset($_POST['titulo'], $_POST['postagem'], $_POST['id'])){

@@ -1,5 +1,5 @@
 <?php
-class controller {
+class Controller {
 
     public function loadView($viewName, $viewData = array()){
         require_once "app/view/" . $viewName . ".php";

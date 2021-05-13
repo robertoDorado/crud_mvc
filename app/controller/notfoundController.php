@@ -1,5 +1,5 @@
 <?php
-class notfoundController extends controller{
+class NotFoundController extends controller{
 
     public function index(){
         $this->loadView("404");
